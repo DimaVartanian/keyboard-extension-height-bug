@@ -45,13 +45,15 @@ class KeyboardViewController: UIInputViewController {
         anotherView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         anotherView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         
+        // EXAMPLE 1
         // Looks fine on iOS 9 and iOS 10
         // red view stretches to fit whatever the default automatic size of the keyboard is, and resizes its height to fit with rotations
-       // anotherView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        // anotherView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
+        // EXAMPLE 2
         // Looks fine on iOS 9 (as above) red view fits the default keyboard height and anchors to the top of the next keyboard button
         // on iOS 10, the red view sizes down to a height of 0 and brings the entire container down with it, the entire view is only the size of the next keyboard button
-        anotherView.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor).isActive = true
+         anotherView.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor).isActive = true
     }
     
     override func didReceiveMemoryWarning() {
