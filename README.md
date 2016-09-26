@@ -5,13 +5,13 @@ When creating a keyboard extension and not specifying a concrete height for its 
 **This only seems to occur on iOS 10.** On iOS 9, the child views resized correctly to fit the default automatic keyboard height.
 
 There are several scenarios this can manifest and this project demonstrates a basic one. It starts with the basic keyboard extension template with the default "next keyboard" button and the 2 size constraints it comes with:
-```
+```swift
 self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
 self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
 ```
 
 Next, we create a single other view that we want to fill the space of the superview without defining a concrete size for itself:
-```
+```swift
 let anotherView = UIView()
 anotherView.backgroundColor = UIColor.red
 anotherView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ anotherView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = tr
 anotherView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
 ```
 Now, let's say we just want to anchor this new view to the bottom of our keyboard superview. We would just do something like: 
-```
+```swift
 anotherView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
 ```
 
@@ -34,7 +34,7 @@ iOS 10
 <img src="iOS%2010%20-%20example%201(works).png" width="150"align="top">
 
 This layout is exactly what we expect. Now instead, let's anchor the new view to the top of our next keyboard button. We get rid of the constraint we just added and replace it with
-```
+```swift
 anotherView.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor).isActive = true
 ```
 
