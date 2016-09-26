@@ -49,3 +49,8 @@ iOS 10
 <img src="iOS%2010%20-%20example%202(broken).png" width="150"align="top">
 
 On iOS 9 it behaves as expected but on iOS 10, the flexible height view is resized down to 0 and all that is left is the fixed height button.
+
+There are no messages about conflicting constraints. I'm trying to figure out what could be causing this and why it would only be happening on iOS 10.
+
+Related stackoverflow post:
+http://stackoverflow.com/questions/39694039/keyboard-extension-loses-height-in-ios-10-when-trying-to-size-automatically-in-s
