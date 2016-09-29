@@ -1,3 +1,7 @@
+**Update**
+Apple has responded to my DTS ticket and told me to file a bug report, so this is actually an iOS 10 bug. I have filed a radar (#28532959) and will update this project and the linked stackoverflow post if I ever get a response or the issue gets fixed.
+
+
 ## Autolayout bug for keyboard extensions trying to achieve an automatic (default) height
 
 When creating a keyboard extension and not specifying a concrete height for its components but instead anchoring them to the view/inputView so that in theory the system will determine their height based on environment and orientation, in some situations that height instead turns into 0 and the keyboard is crushed (with the exception of anything that has a concrete height such as a self sized label or button).
